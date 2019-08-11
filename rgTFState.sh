@@ -1,10 +1,10 @@
 #!/bin/bash
-RESOURCE_GROUP_NAME="terraformTFState"
+RESOURCE_GROUP_NAME="terraformMGMT"
 STORAGE_ACCOUNT_NAME="tfstate$RANDOM"
 CONTAINER_NAME="tfstate"
  
 # Create resource group
-#az group create --name $RESOURCE_GROUP_NAME --location uksouth
+az.cmd group create --name $RESOURCE_GROUP_NAME --location uksouth
  
 # Create storage account
 az.cmd storage account create --resource-group $RESOURCE_GROUP_NAME --name $STORAGE_ACCOUNT_NAME --sku Standard_LRS --encryption-services blob
